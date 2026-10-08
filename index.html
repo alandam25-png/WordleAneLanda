@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="code.js" defer></script>
+</head>
+
+<body>
+
+    <!-- PANTAILA 1: KONFIGURAZIOA -->
+    <main id="konfigurazioa" class="pantaila konfigurazioPantaila">
+        <div class="txartela">
+            <h1 class="izenburua">WORDLE</h1>
+            <p class="azpititulua">Konfiguratu jokoa</p>
+
+            <form id="konfigurazioForma" novalidate>
+                <div class="aukera">
+                    <label for="letraKopurua">Zenbat letra?</label>
+                    <input type="number" id="letraKopurua" name="letraKopurua" min="4" max="10" value="5" required>
+                </div>
+
+                <div class="aukera">
+                    <label for="saiakeraKopurua">Zenbat saiakera?</label>
+                    <input type="number" id="saiakeraKopurua" name="saiakeraKopurua" min="1" max="10" value="6" required>
+                </div>
+
+                <button type="submit" id="hasi" class="botoiBerdea">HASI</button>
+            </form>
+
+            <p id="hasieraMezua" class="azpititulua"></p>
+        </div>
+    </main>
+
+
+    <!-- PANTAILA 2: JOKOA -->
+    <main id="jokoa" class="pantaila jokoPantaila ezkutatu">
+
+        <div class="jokoarenGoiburua">
+            <h1>WORDLE</h1>
+            <p id="mezua">Saiatu hitza asmatzen</p>
+        </div>
+
+        <!-- JOKO TAULA -->
+        <div id="taula" class="taula"></div>
+
+        <!-- TEKLATU BIRTUALA -->
+        <div id="teklatua" class="teklatua"></div>
+
+    </main>
+
+
+    <!-- PANTAILA 3: HISTORIALA -->
+    <main id="historiala" class="pantaila historialPantaila ezkutatu">
+
+        <div class="txartela">
+            <h2 class="historialIzenburua">Azken partidak</h2>
+
+            <div id="partidaZerrenda"></div>
+
+            <button id="berrizJokatu" class="botoiBerdea">
+                BERRIZ JOLASTU
+            </button>
+        </div>
+
+    </main>
+
+</body>
+</html>

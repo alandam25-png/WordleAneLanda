@@ -1,0 +1,275 @@
+:root {
+
+    /* KOLOREAK */
+    --atzeko-kolorea: #f5f6fa;
+    --atzeko-kolorea-iluna: #e8eaf6;
+    --txuria: white;
+    --testua: #222;
+    --testua-argia: #666;
+    --ertz-kolorea: #d5d8df;
+    --botoia: #4f46e5;
+    --tekla-kolorea: #d9dce1;
+    --berdea: #6aaa64;
+    --berdea-iluna: #5b9955;
+    --horia: #c9b458;
+    --grisa: #787c7e;
+
+    /* ERTZAK */
+    --erradioa: 8px;
+    --erradio-handia: 18px;
+
+    /* ESPAZIOA */
+    --tartea-oso-txikia: 4px;
+    --tartea-txikia: 8px;
+    --tartea-ertaina: 20px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--testua);
+    background-color: var(--atzeko-kolorea);
+}
+
+
+/* ESTILO OROKORRAK (mugikorra) */
+
+/* Pantaila osoa */
+
+.pantaila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.ezkutatu {
+    display: none;
+}
+
+
+/* TXARTELA (konfigurazioa eta historiala) */
+
+.txartela {
+    width: 90%;
+    max-width: 420px;
+    padding: 30px 20px;
+    border-radius: var(--erradio-handia);
+    text-align: center;
+    background-color: var(--txuria);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* KONFIGURAZIOA */
+
+.konfigurazioPantaila {
+    background: linear-gradient(135deg, var(--atzeko-kolorea), var(--atzeko-kolorea-iluna));
+}
+
+.izenburua {
+    margin-bottom: 10px;
+    font-size: 2.625rem;
+    letter-spacing: 5px;
+    color: var(--testua);
+}
+
+.azpititulua {
+    margin-bottom: 30px;
+    color: var(--testua-argia);
+}
+
+.aukera {
+    display: flex;
+    flex-direction: column;
+    gap: var(--tartea-txikia);
+    margin: var(--tartea-ertaina) 0;
+    text-align: left;
+}
+
+.aukera label {
+    font-weight: bold;
+}
+
+.aukera input {
+    padding: 12px;
+    border: 1px solid var(--ertz-kolorea);
+    border-radius: var(--erradioa);
+    font-size: 1rem;
+}
+
+
+/* BOTOIAK */
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--erradioa);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--txuria);
+    background-color: var(--botoia);
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.botoiBerdea {
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--berdea);
+    transition: 0.2s;
+}
+
+.botoiBerdea:hover {
+    background-color: var(--berdea-iluna);
+    transform: translateY(-2px);
+}
+
+
+/* JOKOAREN PANTAILA */
+
+.jokoPantaila {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.jokoarenGoiburua {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.jokoarenGoiburua h1 {
+    margin: 0;
+    font-size: 2.375rem;
+}
+
+.jokoarenGoiburua p {
+    margin-top: var(--tartea-txikia);
+    color: var(--testua-argia);
+}
+
+
+/* TAULA */
+
+.taula {
+    display: grid;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.laukia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--ertz-kolorea);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--txuria);
+}
+
+
+/* TEKLATUA */
+
+.teklatua {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--tartea-oso-txikia);
+    width: 100%;
+    max-width: 620px;
+}
+
+.tekla {
+    min-width: 28px;
+    height: 46px;
+    padding: var(--tartea-oso-txikia);
+    font-size: 0.875rem;
+    color: var(--testua);
+    background-color: var(--tekla-kolorea);
+}
+
+
+/* KOLOREAK (taula eta teklatua) */
+
+.ok {
+    border-color: var(--berdea);
+    color: var(--txuria);
+    background-color: var(--berdea);
+}
+
+.existe {
+    border-color: var(--horia);
+    color: var(--txuria);
+    background-color: var(--horia);
+}
+
+.no {
+    border-color: var(--grisa);
+    color: var(--txuria);
+    background-color: var(--grisa);
+}
+
+
+/* HISTORIALA */
+
+.historialPantaila {
+    min-height: 100vh;
+}
+
+.historialIzenburua {
+    margin: 0 0 20px;
+    font-size: 2rem;
+}
+
+.partida {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--ertz-kolorea);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.partida strong {
+    font-size: 1.25rem;
+}
+
+
+/* PANTAILA HANDIAGOAK (mahaigaina) */
+
+@media (min-width: 501px) {
+
+    .txartela {
+        padding: 40px 35px;
+    }
+
+    .laukia {
+        font-size: 1.5rem;
+    }
+
+    .teklatua {
+        gap: var(--tartea-txikia);
+    }
+
+    .tekla {
+        min-width: 52px;
+        height: 58px;
+        padding: var(--tartea-txikia);
+        font-size: 1.125rem;
+    }
+}
