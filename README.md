@@ -1,27 +1,28 @@
 # Wordle
 
-Wordle jokoa HTML, CSS eta JavaScript hutsarekin egina. Hitza asmatu behar duzu, letra eta saiakera kopurua aukeratuta.
+Jokoa HTML, CSS eta JavaScript erabiliz egin dut. Hitz bat asmatu behar da, aukeratutako letra eta saiakera kopuruaren barruan.
 
 ## Nola jokatu
 
-1. Aukeratu letra kopurua (4-10) eta saiakera kopurua (1-10), eta sakatu **HASI**.
-2. Idatzi hitza pantailako teklatuarekin edo zure teklatuarekin, eta sakatu **ENTER**.
-3. Koloreak:
-   - **Berdea**: letra zuzena, posizio zuzenean.
-   - **Horia**: letra hitzean dago, baina beste posizio batean.
-   - **Grisa**: letra ez dago hitzean.
+1. Aukeratu hitzaren letra kopurua (4-10) eta saiakera kopurua (1-10). Ondoren, sakatu **HASI**.
+2. Idatzi hitz bat teklatuarekin eta sakatu **ENTER**.
+3. Koloreek esaten dute ea asmatu duzun:
 
-## Nola exekutatu
+   * **Berdea:** letra eta posizioa zuzenak dira.
+   * **Horia:** letra hitzean dago, baina beste posizio batean.
+   * **Grisa:** letra ez dago hitzean.
 
-Ireki `index.html` nabigatzailean. Internet behar da, hitzak API batetik datozelako (lehen eskaerak segundo batzuk behar ditzake).
+## Nola ireki
+
+Ireki `index.html` fitxategia nabigatzailean. Hitzak API batetik hartzen direnez, Internet behar da. Batzuetan, lehenengoan pixka bat itxaron behar da.
 
 ## Fitxategiak
 
-- `index.html`: pantailak
-- `styles.css`: estiloak
-- `code.js`: jokoaren logika
+* `index.html`: jokoaren pantaila.
+* `styles.css`: diseinua.
+* `code.js`: jokoaren kodea.
 
 ## Oharrak
 
-- Azken 10 partidak `localStorage`-n gordetzen dira.
-- Hitzak gaztelaniaz dira.
+* Azken 10 partidak `localStorage`-n gordetzen dira.
+* Hitzak gaztelaniaz daude.
