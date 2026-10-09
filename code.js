@@ -74,7 +74,7 @@ konfigurazioForma.addEventListener(
         unekoHitza = "";
         saiakerak = [];
         hitza = "";
-        jokoaAmaituta = true; // hitza kargatu arte ezin da jokatu
+        jokoaAmaituta = false; // kargatzen ari den bitartean idatzi daiteke
 
         hasieraMezua.textContent = "";
         konfigurazioa.classList.add("ezkutatu");
@@ -284,6 +284,12 @@ function egiaztatuHitza() {
         return;
     }
 
+    // Hitza oraindik kargatu gabe badago, ezin da egiaztatu
+    if (hitza === "") {
+        mezua.textContent = "Hitza kargatzen...";
+        return;
+    }
+
     if (unekoHitza.length !== hitzarenLuzera) {
         mezua.textContent = "Sartu letra guztiak.";
         return;
@@ -388,6 +394,7 @@ document.addEventListener(
             letraSartu(tekla);
         }
         else if (e.key === "Backspace" || e.key === "Delete") {
+            e.preventDefault();
             ezabatuLetra();
         }
         else if (e.key === "Enter") {
